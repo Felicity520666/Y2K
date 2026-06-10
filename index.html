@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An educational history archive about the Year 2000 computer problem."
+    />
+    <title>The Y2K Bug Archive — History Summative</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#broadcast" aria-label="The Y2K Bug Archive home">
+        <span class="brand-mark">Y2K</span>
+        <span>The Y2K Bug Archive</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#broadcast">Podcast</a>
+        <a href="#archive">Flashcards</a>
+        <a href="#resources">Resources</a>
+      </nav>
+      <span class="air-status"><i></i> Archive online</span>
+    </header>
+
+    <main>
+      <section class="hero" id="broadcast">
+        <img
+          class="hero-image"
+          src="assets/y2k-operations-room.avif"
+          alt="A late-1999 computer operations room filled with glowing CRT monitors"
+        />
+        <div class="image-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div class="live-label"><span></span>The Past Warned the Future: The Story of Y2K</div>
+          <h1>The Y2K<br />Bug</h1>
+          <p>
+            A turning point that exposed technology's fragility and forced a revolution in how software is developed.
+          </p>
+        </div>
+
+        <div class="player" aria-label="Podcast player">
+          <button class="play-button" id="playButton" type="button" aria-label="Play podcast">
+            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6 5h4v14H6zm8 0h4v14h-4z"></path>
+            </svg>
+          </button>
+          <div class="track">
+            <div class="track-meta">
+              <span id="trackTitle">The Past Warned the Future: The Story of Y2K</span>
+              <span id="timeDisplay">00:00 / 07:55</span>
+            </div>
+            <div
+              class="progress"
+              id="progress"
+              role="slider"
+              tabindex="0"
+              aria-label="Broadcast progress"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              aria-valuenow="0"
+            >
+              <span id="progressFill"></span>
+            </div>
+          </div>
+          <button class="script-button" id="checkScriptButton" type="button" title="Review audio script">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 7h8M8 11h8M8 15h5M6 3h12a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path>
+            </svg>
+            <span>Check script</span>
+          </button>
+          <label class="upload-button" title="Load your own recording">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v5h14v-5"></path>
+            </svg>
+            <span>Load recording</span>
+            <input id="audioUpload" type="file" accept="audio/*" />
+          </label>
+          <audio id="audioPlayer" src="assets/podcast.mp3" preload="metadata"></audio>
+        </div>
+      </section>
+
+      <section class="signal-strip" aria-label="Podcast details">
+        <span>Topic: Y2K computer problem</span>
+        <span>••••••••••••••••</span>
+        <span>Duration 07:55</span>
+        <span>••••••••••••••••</span>
+        <span>Script included</span>
+      </section>
+
+      <section class="archive-section" id="archive">
+        <div class="section-heading">
+          <div>
+            <h2>The Y2K file</h2>
+          </div>
+          <p class="section-intro">
+            Tap each archive card to review the causes, response, and outcome
+            of the Year 2000 computer problem.
+          </p>
+        </div>
+
+        <div class="card-grid" id="cardGrid"></div>
+        <div class="card-controls">
+          <span id="cardCounter">0 of 6 cards opened</span>
+          <button id="resetCards" type="button">Reset cards</button>
+        </div>
+      </section>
+
+      <section class="resources-section" id="resources">
+        <div class="resources-title">
+          <h2>Resources</h2>
+          <p>
+            These sources provide background information, primary records,
+            and secondary resources and analysis about the Y2K problem and its impact.
+          </p>
+        </div>
+        <div class="resource-list">
+          <a href="https://www.britannica.com/technology/Y2K-bug" target="_blank" rel="noopener noreferrer">
+            <span class="resource-number">01</span>
+            <span>
+              <strong>Y2K Bug: Definition, History, and Facts</strong>
+              <small>Encyclopaedia Britannica · Background overview</small>
+            </span>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://unwritten-record.blogs.archives.gov/2017/12/27/y2k-the-new-years-disaster-that-wasnt/" target="_blank" rel="noopener noreferrer">
+            <span class="resource-number">02</span>
+            <span>
+              <strong>Y2K: The New Year's Disaster That Wasn't</strong>
+              <small>U.S. National Archives · Historical records</small>
+            </span>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.gao.gov/products/aimd-00-290" target="_blank" rel="noopener noreferrer">
+            <span class="resource-number">03</span>
+            <span>
+              <strong>Year 2000 Computing Challenge: Lessons Learned</strong>
+              <small>U.S. Government Accountability Office · Government report</small>
+            </span>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.gao.gov/products/t-aimd-99-214" target="_blank" rel="noopener noreferrer">
+            <span class="resource-number">04</span>
+            <span>
+              <strong>Estimated Costs and Future Implications</strong>
+              <small>U.S. Government Accountability Office · 1999 testimony</small>
+            </span>
+            <span class="resource-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="script-dialog" id="scriptDialog" aria-labelledby="scriptDialogTitle">
+      <div class="script-dialog-header">
+        <div>
+          <p class="eyebrow">Podcast</p>
+          <h2 id="scriptDialogTitle">Check podcast script</h2>
+        </div>
+        <button class="dialog-close" id="closeScriptButton" type="button" aria-label="Close script">×</button>
+      </div>
+      <div class="script-summary">
+        <span id="scriptWordCount">0 words</span>
+        <span id="scriptReadTime">0 minute read</span>
+        <strong id="scriptReviewCount">0 / 10 checked</strong>
+      </div>
+      <a
+        class="formatted-script-link"
+        href="https://docs.google.com/document/d/1BpfHJJfNP8OtlesUiznDKkVPPEDoY7rg9pJyIAoDvFs/edit?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>For a more document-formatted script, check the Google Doc</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <ol class="script-lines" id="scriptLines"></ol>
+      <div class="script-dialog-footer">
+        <button id="resetScriptReview" type="button">Clear checks</button>
+        <button id="finishScriptReview" type="button">Finish review</button>
+      </div>
+    </dialog>
+
+    <footer>
+      <span>The Y2K Bug Archive</span>
+      <span>Made by Felicity</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
