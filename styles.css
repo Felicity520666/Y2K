@@ -619,6 +619,7 @@ nav a {
   margin: 16px 0 0;
   color: #d6dad8;
   line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .resource-card blockquote {
@@ -699,6 +700,7 @@ nav a {
   margin-bottom: 14px;
   color: var(--cyan);
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .resource-arrow {
@@ -718,6 +720,21 @@ footer {
   font-family: "DM Mono", monospace;
   font-size: 10px;
   text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .resources-section {
+    display: block;
+  }
+
+  .resources-title {
+    margin-bottom: 45px;
+    position: static;
+  }
+
+  .resources-title h2 {
+    font-size: clamp(48px, 10vw, 86px);
+  }
 }
 
 @media (max-width: 820px) {
@@ -820,8 +837,12 @@ footer {
 
   .resource-card {
     min-height: 120px;
-    grid-template-columns: 28px 1fr 18px;
+    grid-template-columns: 28px minmax(0, 1fr);
     gap: 12px;
+  }
+
+  .resource-arrow {
+    display: none;
   }
 
   footer {
