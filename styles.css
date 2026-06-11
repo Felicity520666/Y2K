@@ -602,7 +602,8 @@ nav a {
   border-top: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.resource-list a {
+.resource-list a,
+.video-resource {
   min-height: 145px;
   padding: 26px 0;
   display: grid;
@@ -616,6 +617,23 @@ nav a {
 
 .resource-list a:hover {
   color: var(--acid);
+}
+
+.video-resource video {
+  width: 100%;
+  margin-top: 22px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #000;
+}
+
+.video-resource .video-note {
+  margin-top: 12px;
+  color: var(--cyan);
+}
+
+.video-symbol {
+  font-size: 14px;
 }
 
 .resource-number,
@@ -762,7 +780,8 @@ footer {
     position: static;
   }
 
-  .resource-list a {
+  .resource-list a,
+  .video-resource {
     min-height: 120px;
     grid-template-columns: 28px 1fr 18px;
     gap: 12px;
