@@ -602,8 +602,7 @@ nav a {
   border-top: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.resource-list a,
-.video-resource {
+.resource-card {
   min-height: 145px;
   padding: 26px 0;
   display: grid;
@@ -612,10 +611,30 @@ nav a {
   align-items: start;
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  text-decoration: none;
 }
 
-.resource-list a:hover {
+.resource-card p,
+.resource-card blockquote {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: #d6dad8;
+  line-height: 1.65;
+}
+
+.resource-card blockquote {
+  padding-left: 18px;
+  border-left: 2px solid var(--cyan);
+  color: #b9bfbc;
+  font-style: italic;
+}
+
+.resource-card a {
+  color: white;
+  text-decoration-color: var(--cyan);
+  text-underline-offset: 4px;
+}
+
+.resource-card a:hover {
   color: var(--acid);
 }
 
@@ -661,6 +680,25 @@ nav a {
   display: block;
   color: #b9bfbc;
   line-height: 1.6;
+}
+
+.resource-card .source-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.source-links {
+  margin: 20px 0 0;
+  padding-left: 20px;
+}
+
+.source-links li {
+  margin-bottom: 14px;
+  color: var(--cyan);
+  line-height: 1.45;
 }
 
 .resource-arrow {
@@ -780,8 +818,7 @@ footer {
     position: static;
   }
 
-  .resource-list a,
-  .video-resource {
+  .resource-card {
     min-height: 120px;
     grid-template-columns: 28px 1fr 18px;
     gap: 12px;
