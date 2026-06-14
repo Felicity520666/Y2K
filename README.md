@@ -10,6 +10,11 @@ a collection of research resources.
 - CSS
 - JavaScript
 
+## Features
+- Podcast recorded by myself, with the script attached to the website if you want to cheack it out!
+- Flashcards with important facks about the Y2K bug, click on the cards to learn more!
+- Resources I used to do the research for this project.
+
 ## How To Use
 Go to https://felicity520666.github.io/Y2K/ to explore the website! Click on the audio player to listen to my podcast of the Y2K bug, and son't forget to check out the flip-card facts! You can also check out the script if you are interested in learning more! There are resources at the button of the website for you to explore yourslf as well! Hope you enjoy the website!
 
